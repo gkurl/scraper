@@ -35,7 +35,15 @@ class ScraperController extends Controller
      */
     public function store(Request $request)
     {
-        $keywords = Input::get('q');
+        $terms = $request->query('keywords');
+        $location = $request->query('location');
+   /*     explode(", ", $terms);*/
+
+       /* parse_url($terms,PHP_URL_QUERY);
+        explode("/", trim($terms, "/"));;*/
+
+        dd($terms, $location);
+
     }
 
     /**

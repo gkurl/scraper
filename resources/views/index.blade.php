@@ -16,9 +16,12 @@
 <div class="form">
 
     <form action="{{route('store')}}" method="get">
-        Search Terms
-        <input type="text" name="q" placeholder="Search..."/>
-        <input type="button" value="Submit" name="submit"/>
+        {{ csrf_field() }}
+        Keywords
+        <input type="text" name="keywords" placeholder="Search..."/>
+        Location
+        <input type="text" name="location" placeholder="Location..."/>
+        <input type="submit" value="Submit" name="submit"/>
     </form>
 
 
